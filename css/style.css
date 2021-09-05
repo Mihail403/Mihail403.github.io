@@ -8,9 +8,9 @@
 div[class*="wrapper"] {
 	width: 1140px;
 }
-.wrapper {
-	height: 100vh;
-	width: 100vw;
+.wrapper, html {
+	height: 100%;
+	width: 100%;
 }
 .u-clearfix::after,
 .u-clearfix::before{
