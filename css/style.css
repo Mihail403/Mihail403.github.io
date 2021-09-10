@@ -138,7 +138,7 @@ body, html {
 .sec-3__block__title2,
 .sec-3__block__title5,
 .sec-3__block__subtitle, span {
-	color: initial;
+	color: #000;
 }
 .sec-3__block__title2 {
 	margin-top: 28px;
@@ -156,7 +156,7 @@ body, html {
 	line-height: 1.6;
 }
 .sec-3__block__subtitle ~ p {
-	color: initial;
+	color: #000;
 	margin-top: 20px;
 	font: normal 16px "Open sans";
 	line-height: 1.6;
