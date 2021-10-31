@@ -438,7 +438,7 @@ input::-webkit-inner-spin-button {
     color: #E8D209;
 }
 .sec-5 {
-    background: linear-gradient(to right, #512063 20%, #fff 80%);
+    background: linear-gradient(to left top, #512063 35%, #fff 60%);
 }
 .sec-5__inner {
     margin: 30px auto;
@@ -479,7 +479,7 @@ input::-webkit-inner-spin-button {
     margin-top: 10px;
 }
 .sec-6 {
-    background-color: transparent;
+    background: linear-gradient(to bottom, #512063 40%, #fff 90%);
 }
 .sec-6__container {
     min-height: 400px;
