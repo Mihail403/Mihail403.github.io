@@ -18,7 +18,6 @@
     --font-size: 0.625rem;
     --width-container: 1140px;
     --adaptive-img: center/cover no-repeat scroll;
-    --main-image: url('../../../content/images/main-forest.jpeg');
 }
 [hidden] {
     display: none;
