@@ -1,0 +1,49 @@
+/* Подключение локальных шрифтов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* ::-webkit-scrollbar {
+}
+::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-track {
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+} */
+:root {
+    --container-width: 1140px;
+    --font-size: 0.625rem;
+    --adaptive-img: center/cover no-repeat scroll;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-size: var(--font-size);
+    display: flex;
+    flex-direction: column;
+}
+div[class="wrapper"] {
+    margin: 0 auto;
+    width: var(--container-width);
+}
+div[class="inner"] {
+    margin: 60px auto;
+}
+[hidden] {
+    display: none;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
