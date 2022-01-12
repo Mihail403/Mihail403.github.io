@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb{
+	background: #db545a;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #d63b42;
+}
+::-webkit-scrollbar-track{
+	background: #000;
+}
+::-webkit-scrollbar{
+	width: 15px;
+}
+body{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto', sans-serif;
+}
+p, a{
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+}
+p{
+	line-height: 1.6;
+}
+
+
+
+/* Menu for project */
+.menuExit {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+	background-color: #262626;
+	min-height: 80px;
+	align-items: center;
+}
+.menuExit__btn {
+	color: #fff;
+    display: inline-block;
+    background-color: #782626;
+    padding: 8px 45px;
+	border-radius: 4px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+	font: 400 18px/1.1 "Roboto", sans-serif;
+}
+.menuExit__title {
+	color: #ccc;
+	font: 300 20px/1.1 "Roboto", sans-serif;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    cursor: default;
+}
+.menuExit__btn:hover {
+    color: #262626;
+    background-color: #fff;
+}
+
+
+
+.home > .home__h1, .home > .home__h5{
+	text-transform: uppercase;
+	width: 650px;
+	color: #fff;
+	font-weight: bold;
+}
+.home > h5{
+	margin-top: 20px;
+	letter-spacing: 3.5px;
+}
+.home > h1{
+	text-shadow: 3px 2px 1px #333;
+	letter-spacing: 2px;
+	margin-top: 20px;
+	line-height: 1.1;
+}
+.header{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 0px 190px;
+	height: 80px;
+	overflow: hidden;
+}
+.footer{
+	letter-spacing: 2px;
+	height: 250px;
+	background: #222;
+	color: #fff;
+	font-size: 14pt;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.home{
+	padding: 130px 0px 0px 190px;
+	height: 852px;
+	background: #000 url("../Images/defwr.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.header__logo{
+	width: 64px;
+	float: left;
+}
+.header__nav{
+	position: absolute;
+	right: 190px;
+}
+.header__nav ul{
+	display: flex;
+}
+.header__nav ul li{
+	list-style-type: none;
+}
+.header__nav ul li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-flex;
+	padding: 40px 20px;
+	font: normal 16px "Open Sans";
+}
+.header__nav ul li:first-child a{
+	color: #48d;
+}
+.header__nav ul li:not(:first-child) a:hover{
+	color: #db545a;
+}
+.best-car{
+	display: grid;
+	height: 641px;
+	padding: 60px 190px;
+	grid-template-columns: 741px calc(1140px - 741px);
+	grid-template-rows: 522px;
+	grid-column-gap: 30px;
+}
+.best-car__block-left{
+	background: linear-gradient(to right, #000 61%, #fff 39%);
+}
+.block-left__image{
+	width: 639px;
+	height: 402px;
+	margin: 60px;
+}
+.best-car__block-right{
+	padding: 20px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+.block-right__line{
+	background: #000;
+	width: 69px;
+	height: 10px;
+}
+.best-car__block-right > h2{
+	margin-top: 20px;
+	font-size: 27pt;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+}
+.best-car__block-right > h5{
+	margin-top: 20px;
+	font-size: 15pt;
+	letter-spacing: 2px;
+	font-family: "Roboto";
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.best-car__block-right > p{
+	font-family: "Open Sans";
+	margin-top: 23px;
+	text-align: left;
+}
+.best-car__block-right > a{
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 13px 30px;
+	font-size: 11pt;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-family: "Roboto", sans-serif;
+	margin-top: 20px;
+	text-decoration: none;
+}
+.block-info{
+	display: grid;
+	grid-template-columns: 40% repeat(3, 20%);
+	grid-template-rows: 185px;
+	grid-column-gap: 10px;
+	padding: 11px 190px;
+}
+.block-text{
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+}
+.block-text__title{
+	text-transform: uppercase;
+	font: 500 20px "Roboto";
+	letter-spacing: 2px;
+}
+.block-text__subtitle{
+	margin-top: 20px;
+}
+.block-location, .block-car, .block-user{
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	align-items: center;
+}
+.block-location__icon, .block-car__icon, .block-user__icon{
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+.block-location__text, .block-car__text, .block-user__text{
+	margin-top: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font: normal 18px "Roboto";
+}
+.block-car-rental{
+	background: #000;
+	padding: 60px 190px;
+	color: #fff;
+}
+.car-rental{
+	grid-gap: 56px;
+	display: grid;
+	grid-template-areas: 
+	'a a b b b'
+	'a a b b b'
+	'c c d d d'
+	'c c d d d';
+	grid-template-columns: repeat(2, 190px) repeat(3, auto);
+	grid-template-rows: repeat(2, 270px) repeat(2, 100px);
+}
+.car-rental__cell-1{
+	position: relative;
+	grid-area: a;
+	height: 500px;
+}
+.cell-1__object{
+	position: absolute;
+	width: 360px;
+	height: 410px;
+	background: #db545a;
+	bottom: 0;
+	right: 0;
+}
+.cell-1__image{
+	position: relative;
+	z-index: 998;
+	width: 360px;
+	height: 410px;
+	background: url('../images/woman-0.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.car-rental__cell-2{
+	grid-area: b;
+	grid-row: 1 / 2;
+	padding: 30px;
+}
+.car-rental__cell-3{
+	grid-area: c;
+	padding: 30px;
+	padding-top: 0px;
+}
+.car-rental__cell-4{
+	grid-area: d;
+	background: url('../images/woman-1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-column: 3 / 6;
+	grid-row: 2 / 5;
+}
+.cell-3__title{
+	font: 20px "Roboto";
+	letter-spacing: 2px;
+}
+.cell-3__subtitle{
+	margin-top: 20px;
+	font: 15px "Open Sans";
+}
+.cell-3__btn{
+	white-space: nowrap;
+	width: 195px;
+	margin-top: 20px;
+	font: 14px "Open Sans";
+	text-transform: uppercase;
+	background: #db545a;
+	padding: 12px 30px;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.cell-3__btn:hover{
+	background: #d63b42;
+}
+.cell-2__h5{
+	margin-top: 20px;
+	font: normal 20px "Roboto";
+}
+.cell-2__title{
+	margin-top: 20px;
+	font: normal 36px "Roboto";
+}
+.cell-2__text{
+	margin-top: 20px;
+	font: 16px "Open Sans";
+}
+.block-read-more{
+	height: 381px;
+	display: grid;
+	grid-template-columns: 66.666% 33.333%;
+	grid-template-rows: auto;
+	padding: 29px 190px;
+	background: #000;
+}
+.block-read-more__image-car{
+	background: #000 url('../images/black-car.jpeg');
+	background-position: center;
+	background-size: 82.5%;
+	background-repeat: no-repeat;
+	padding: 20px;
+}
+.block-read-more__text{
+	text-align: right;
+	padding: 20px;
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-direction: column;
+}
+.block-read-more__h2{
+	font: 36px "Roboto";
+	padding-left: 20px;
+}
+.block-read-more__btn{
+	background: #db545a;
+	letter-spacing: 2px;
+	padding: 10px 30px;
+	width: 157px;
+	font-size: 14px;
+	margin-top: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.block-read-more__btn:hover{
+	background: #d63b42;
+}
+.block-technologies{
+	height: 435px;
+}
+.block-technologies__items{
+	height: 100%;
+	width: 1140px;
+	margin: 0 auto;
+}
+.items__title{
+	color: #db545a;
+	font: normal 36px "Roboto";
+	text-align: center;
+	padding-top: 43px;
+}
+.items__technology{
+	display: grid;
+	grid-template-rows: 260px;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 30px;
+	margin: 43px 0px;
+}
+.items__block{
+	padding: 10px;
+}
+.items__block > div{
+	width: 184px;
+	height: 176px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.items__block > h5{
+	margin: 20px 0px;
+	font-size: 20px;
+	font-weight: normal;
+}
+.block-history{
+	height: 607px;
+}
+.block-history__items{
+	padding: 70px 0px;
+	margin: 0 auto;
+	width: 1140px;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 466px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+}
+.block-history__image{
+	padding: 30px;
+}
+.history__image{
+	width: 100%;
+	height: 100%;
+}
+.history__image{
+	background: #222 url('../images/car-red-1.jpeg');
+	background-size: 100%;
+	object-position: 0% 57.01%;
+	background-position: 0% 57.01%;
+}
+.block-history__block-text{
+	padding: 30px 30px 30px 20px;
+	color: #777;
+	font: normal 16px "Open Sans";
+	line-height: 1.6;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.block-history__block-text > h2{
+	color: #db545a;
+	font: normal 36px "Roboto";
+}
+.block-history__block-text > p{
+	margin-top: 30px;
+}
+.block-history__block-text > p:last-child{
+	font-weight: bold;
+	margin-top: 30px;
+}
+.block-information{
+	height: 648px;
+	background: #111;
+}
+.block-information-images{
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+	'a a b c'
+	'a a d e';
+}
+.block-information-images__image:first-child{
+	background-size: cover;
+	background-position: 14%;
+	background-repeat: no-repeat;
+}
+.block-information-images__image{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.block-information-images__btn{
+	margin: 20px;
+	background: #db545a;
+	color: #fff;
+	font: normal 14px "Open Sans";
+	letter-spacing: 2px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.block-information-images__btn:hover{
+	background: #d63b42;
+}
+.block-information-images__image:nth-child(4) > p{
+	margin: 20px;
+}
+.block-information-images__image:nth-child(4) > h2{
+	font: 36px "Roboto";
+	margin: 20px 20px 0px 20px;
+}
+.block-contact-form{
+	height: 616px;
+}
+.contact-form{
+	margin: 0 auto;
+	width: 1140px;
+	height: 100%;
+	padding: 70px 0px;
+	display: grid;
+	grid-template-columns: 45% 55%;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+	'adr send'
+	'fol send';
+}
+.contact-form__address{
+	grid-area: adr;
+	padding: 30px 30px 30px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.contact-form__address > h5{
+	font: 20px "Roboto";
+}
+.contact-form__address > p{
+	text-align: left;
+	font-size: 24px;
+	margin-top: 40px;
+	color: #777;
+}
+.contact-form__followers{
+	grid-area: fol;
+	padding: 30px;
+}
+.contact-form__followers > h5{
+	font: 20px "Roboto";
+}
+.contact-form__sending-data{
+	grid-area: send;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.contact-form__followers-section{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 23px;
+	width: 188px;
+}
+.contact-form__followers-icon{
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	background-size: cover;
+	background-position: center;
+}
+.contact-form__followers > p{
+	font-size: 20px;
+	margin-top: 32px;
+}
+.contact-form__sending-data > h2{
+	font: 36px "Roboto";
+	text-transform: uppercase;
+}
+.contact-form__sending-data-form{
+	display: flex;
+	flex-direction: column;
+	margin-top: 37px;
+	height: 100%;
+}
+.sending-data-form__name, .sending-data-form__email, .sending-data-form__textarea{
+	width: 100%;
+	border: none;
+	display: block;	
+	background: #f2f2f2;
+	padding: 10px 12px;
+	font: 16px "Open Sans";
+}
+.sending-data-form__email{
+	margin-top: 25px;
+}
+.sending-data-form__textarea{
+	margin-top: 25px;
+	resize: none;
+	height: 100%;
+}
+.sending-data-form__btn{
+	margin-top: 37px;
+	padding: 10px 30px;
+	background: #db545a;
+	display: inline-block;
+	color: #fff;
+	font: 14px "Open Sans";
+	letter-spacing: 2px;
+}
+.sending-data-form__btn:hover{
+	background: #d63b42;
+}
+.sidebar{
+	color: #fff;
+	top: 80px;
+	height: 852px;
+	width: 175px;
+	padding: 20px 15px;
+	text-align: center;
+	background: rgba(10, 10, 10, 0.5);
+	position: absolute;
+	transition: 500ms ease-in-out;
+}
+.sidebar__btn{
+	margin: 15px 0px;
+	letter-spacing: 1.5px;
+	font-family: "Roboto", sans-serif;
+	cursor: pointer;
+	padding: 10px 30px;
+	background: #db545a;
+	color: #fff;
+}
+.sidebar__btn:hover{
+	background: #d63b42;
+}
+.sidebar__title{
+	letter-spacing: 3px;
+	font-family: "Roboto", sans-serif;
+}
