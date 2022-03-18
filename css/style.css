@@ -1,0 +1,260 @@
+/* Подлючение шрифта через @font-face */
+@import url("fonts.css");
+/* Минимальный сброс свойств */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Основной корневой размер шрифта */
+    --font-size: 0.625rem;
+    /* Ширина главного контейнера */
+    --container-width: 1020px;
+    /* Цветовая палитра макета */
+    --color1: #000000;
+    --color2: #ffffff;
+    --color3: #79a9fe;
+    --color4: #ec686b;
+    --color5: #5e7d36;
+    --color6: #fbfbb5;
+    --color7: #b4b6a3;
+    font-size: var(--font-size);
+}
+body {
+    background-color: var(--color2);
+}
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+p,
+a,
+span,
+div > * {
+    font: 400 1.6rem/1.4 "Comic Sans MS", sans-serif;
+    color: var(--color1);
+}
+h1, h2, h3, h4, h5, h6 {
+    font: 500 2.8rem/1.2 "Comic Sans MS", sans-serif;
+    color: var(--color4);
+}
+h1 {
+    font: 700 3.6rem/1.2 "Comic Sans MS", sans-serif;
+    color: var(--color6);
+}
+a {
+    text-decoration: none;
+    color: var(--color5);
+}
+img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: inline-block;
+}
+ul, li {
+    list-style: none;
+}
+
+/* --------------
+     HEADER
+-------------- */
+.header {
+    height: 150px;
+    padding: 5px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background: var(--color3) url('../images/Fon-Header.jpg') center/cover no-repeat scroll;
+}
+.header__image {
+    margin-right: 20px;
+}
+.header__title_indent {
+    all: inherit;
+    text-indent: 60px;
+}
+.header__block {
+    margin: auto 4px 6px 0;
+}
+.header__block-title {
+    color: var(--color6);
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+}
+.header__block-title_color {
+    all: inherit;
+    color: var(--color4);
+    display: inline-block;
+}
+/* --------------
+      FORM
+-------------- */
+.form {
+    display: flex;
+    align-items: center;
+}
+.form__btn-search {
+    background-color: transparent;
+    margin-right: 6px;
+}
+.form__icon::before {
+    content: "\f002";
+    color: var(--color4);
+    width: 20px;
+    height: 20px;
+}
+.form__input-search {
+    width: 100%;
+    padding: 4px 12px;
+    border-radius: 15px;
+    outline: none;
+    font: 400 1.4rem/1.4 "Comic Sans MS", sans-serif;
+}
+/* --------------
+      MENU
+-------------- */
+.navigation {
+    text-align: center;
+    padding: 0 15px;
+    min-height: 45px;
+    background: var(--color7) url('../images/Menu.jpg') center/cover no-repeat scroll;
+}
+.menu__icon {
+    --menu-size: 24px;
+    display: none;
+    width: var(--menu-size);
+    height: var(--menu-size);
+    cursor: pointer;
+    background: url('../images/icons/menu.png') center/cover no-repeat scroll;
+}
+.menu__body {
+    display: block;
+    transition: all 350ms ease-in-out 0s;
+}
+.menu__list {
+    font-size: 0;
+}
+.menu__item {
+    display: inline-block;
+}
+.menu__link {
+    padding: 15px;
+    display: inline-block;
+    transition: all 50ms ease-in-out 0s;
+}
+.menu__link:hover {
+    background-color: var(--color4);
+    color: var(--color2);
+}
+/* --------------
+   MENU ACTIVE
+-------------- */
+.menu__icon._active {
+    background-image: url('../images/icons/close.png');
+}
+.menu__icon._active::after {
+    content: "";
+    display: block;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+.menu__icon._active + .menu__body {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    z-index: 100;
+}
+.menu__icon._active + .menu__body .menu__link {
+    color: var(--color2);
+    font-size: 2rem;
+    width: 100%;
+}
+.menu__icon._active + .menu__body .menu__item {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+/* --------------
+      MAIN
+-------------- */
+.main {
+    display: flex;
+    padding: 30px 15px;
+}
+.main__content {
+    flex: 1 1 auto;
+}
+.main__content-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+.main__content-image {
+    align-self: flex-start;
+    margin-right: 15px;
+    width: 240px;
+}
+.main__content-title {
+    margin-bottom: 12px;
+    font-variant: small-caps;
+}
+.main__content-title_align {
+    all: inherit;
+    display: inline-block;
+    padding-left: 5px;
+}
+.main__sidebar {
+    flex: 1 0 220px;
+}
+.main__sidebar-box::-webkit-scrollbar {
+    width: 0;
+}
+.main__sidebar-box {
+    overflow: hidden auto;
+    max-height: 500px;
+    padding: 0 10px;
+}
+.main__sidebar-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.main__sidebar-item {
+    display: flex;
+}
+.main__sidebar-item:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+.main__sidebar-text {
+    font-size: 15px;
+}
+.main__sidebar-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+/* --------------
+     FOOTER
+-------------- */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    padding: 15px;
+    overflow: hidden;
+    background: var(--color7) url("../images/Footer-fon.jpg") center/cover no-repeat scroll;
+}
+.footer__text {
+    text-align: center;
+}
